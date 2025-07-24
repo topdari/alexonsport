@@ -136,3 +136,76 @@ body {
 main {
   flex: 1;
 }
+.about h2 {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 20px;
+}
+.about {
+padding: 60px 20px;
+text-align: center; /* если весь текст в блоке должен быть по центру */
+}
+.about {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222;
+  padding: 40px 0;
+}
+@media (max-width: 768px) {
+  .about,
+  .about-full,
+  .about-preview {
+    font-size: 16px;
+  }
+}
+
+.about-full {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+.about-full,
+.about-preview {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about-full.visible {
+  max-height: 1000px; /* достаточно большое значение */
+  opacity: 1;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #444;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+  margin: 20px auto;
+  border: none;
+  border-radius: 2px;
+}

@@ -27,12 +27,55 @@
       <a href="results.html" class="btn-primary">Смотреть достижения</a>
     </div>
   </section>
+  <section class="about">
+  <div class="container">
+    <h2>Обо мне</h2>
+    <hr class="divider">
+
+    <div class="about-preview">
+      <p>Меня зовут Алексей Степанов. Я занимаюсь лёгкой атлетикой уже более 10 лет.</p>
+    </div>
+
+    <div class="about-full hidden">
+      <p>Мой путь в спорт начался ещё в школе, где я впервые попробовал свои силы на районных соревнованиях и понял, что хочу связать свою жизнь с большим спортом.</p>
+      <p>В данный момент меня поддерживает и тренирует Прохоров Анатолий — опытный наставник и человек, который помог мне поверить в свои силы и достичь высоких результатов. Под его руководством я неоднократно становился призёром областных и всероссийских соревнований, улучшал свои личные рекорды и учился не останавливаться на достигнутом.</p>
+      <p>Для меня спорт — это не только физическая сила и техника, но и огромная работа над собой, дисциплина и постоянное развитие. Сегодня я продолжаю тренироваться и выступать на соревнованиях, делюсь своим опытом с молодыми спортсменами и хочу вдохновлять других верить в себя и свои мечты.</p>
+    </div>
+
+    <button id="toggle-about" class="btn-primary">Читать больше</button>
+  </div>
+</section>
+
+
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© 2025 Алексей Степанов. Все права защищены.</p>
-    </div>
-  </footer>
+  <div class="container">
+    <p>© 2025 Алексей Степанов. Все права защищены.</p>
+    <p>Контакты: <a href="mailto:example@mail.ru">alexey.stepanovsport@mail.ru</a></p>
+    <p>Instagram: @alexon4ikdisk</p>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // fade-in (если ты его используешь)
+    var fadeElements = document.querySelectorAll('.fade-in');
+    for (var i = 0; i < fadeElements.length; i++) {
+      fadeElements[i].style.animationDelay = (i * 0.2) + 's';
+    }
+
+    // Плавное раскрытие блока "Обо мне"
+    var btn = document.getElementById('toggle-about');
+    var fullText = document.querySelector('.about-full');
+
+    if (btn && fullText) {
+      btn.addEventListener('click', function () {
+        fullText.classList.toggle('visible');
+        btn.textContent = fullText.classList.contains('visible') ? 'Свернуть' : 'Читать больше';
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
